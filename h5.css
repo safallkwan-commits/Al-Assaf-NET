@@ -186,3 +186,45 @@ body {
     .submit-btn { padding: 12px; font-size: 0.95rem; }
     .price-info, .price-tag { width: 100%; text-align: center; margin-bottom: 8px; }
 }
+/* 1. ضبط الجسم لمنع التمرير الزائد */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* يمنع التمرير الخارجي تماماً */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* يضع المحتوى في منتصف الشاشة عمودياً */
+    align-items: center;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* 2. جعل الحاوية مرنة وتناسب الشاشة */
+.container {
+    width: 90%;
+    max-width: 400px;
+    max-height: 95vh; /* يضمن أن لا يتجاوز طول المحتوى 95% من ارتفاع الشاشة */
+    overflow-y: auto; /* إذا كان المحتوى طويلاً جداً، يظهر شريط تمرير داخل الكرت فقط وليس الصفحة كاملة */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* تقليل المسافات بين العناصر */
+}
+
+/* 3. تصغير المسافات (Margins) */
+.glass-card {
+    margin-bottom: 10px; /* تقليل المسافة بين الكروت */
+    padding: 15px; /* تقليل الحشو الداخلي */
+}
+
+/* 4. إخفاء شريط التمرير المزعج (اختياري لجعل الشكل أنيق) */
+.container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
