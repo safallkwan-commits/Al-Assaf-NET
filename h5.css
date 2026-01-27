@@ -31,14 +31,15 @@ meta[name="viewport"] {
                 linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
     z-index: -1;
 }
-
+/*
 .container {
     width: 90%;
     max-width: 450px;
     padding: 20px 10px;
-}
+}*/
 
 /* Glass Card */
+/*
 .glass-card {
     background: var(--glass-bg);
     backdrop-filter: blur(15px);
@@ -48,7 +49,45 @@ meta[name="viewport"] {
     margin-bottom: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     text-align: center;
+}*/
+/* الحاوية الأساسية */
+.container {
+    width: 95%; /* استخدام نسبة مئوية ليتناسب مع عرض أي شاشة */
+    max-width: 420px; /* لا يتجاوز هذا العرض على شاشات الكمبيوتر الكبيرة */
+    margin: 0 auto;
+    padding: 20px 10px;
+    box-sizing: border-box; /* لضمان عدم خروج العناصر عن الحواف */
 }
+
+/* الكروت الزجاجية */
+.glass-card {
+    width: 100%; /* تأخذ كامل عرض الحاوية */
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 20px; /* تقليل الحشو قليلاً ليناسب الشاشات الصغيرة */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* تعديل النصوص لتصغر تلقائياً في الشاشات الصغيرة جداً */
+@media (max-width: 360px) {
+    .logo h1 { font-size: 1.5rem; }
+    .logo i { font-size: 2.5rem; }
+    .submit-btn { padding: 12px; font-size: 0.9rem; }
+    .action-btn i { font-size: 1.2rem; }
+}
+
+/* لجعل الخلفية (الصورة التي صممتها) ثابتة ومنتصفة دائماً */
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
 
 /* الهيدر والشعار */
 .logo i {
