@@ -1,0 +1,469 @@
+/* ============================================
+   ملف التنسيق المتجاوب الشامل
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', 'Tahoma', sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   التنسيق الأساسي للحاوي
+   ============================================ */
+
+.container {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+/* ============================================
+   الهيدر
+   ============================================ */
+
+header {
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin: 0.5rem 0;
+}
+
+.status-badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+}
+
+.tagline {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    margin-top: 0.5rem;
+}
+
+/* ============================================
+   النموذج الرئيسي
+   ============================================ */
+
+.main-login {
+    padding: 1.5rem 1rem;
+}
+
+.main-login h2 {
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    margin-bottom: 1.5rem;
+}
+
+form {
+    width: 100%;
+}
+
+.input-group {
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.input-group i {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    padding: 0.5rem 0;
+}
+
+.input-group input::placeholder {
+    opacity: 0.7;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   قسم الأسعار
+   ============================================ */
+
+.prices-section {
+    padding: 1.5rem 1rem;
+}
+
+.prices-section h3 {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    margin-bottom: 1.5rem;
+}
+
+.prices-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+}
+
+.price-item {
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.price-item:hover {
+    transform: translateY(-3px);
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+    min-width: 150px;
+}
+
+.plan-name {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    font-weight: 600;
+}
+
+.plan-details {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    opacity: 0.8;
+}
+
+.price-tag {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* ============================================
+   قسم التواصل
+   ============================================ */
+
+.admin-contact {
+    padding: 1.5rem 1rem;
+}
+
+.admin-contact h2 {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    padding: 0;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    padding: 0.75rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    min-height: 100px;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .icon-box {
+    transform: scale(1.15);
+}
+
+.contact-item span {
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ============================================
+   التنسيق على الأجهزة الصغيرة
+   ============================================ */
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    header {
+        padding: 1rem 0.75rem;
+    }
+
+    .main-login {
+        padding: 1rem 0.75rem;
+    }
+
+    .input-group {
+        padding: 0.6rem 0.75rem;
+        margin: 0.75rem 0;
+    }
+
+    .prices-container {
+        gap: 0.75rem;
+    }
+
+    .price-item {
+        padding: 0.75rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .price-tag {
+        align-self: flex-end;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+
+    .contact-item {
+        min-height: 85px;
+        padding: 0.5rem;
+    }
+
+    .icon-box {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+/* ============================================
+   التنسيق على الأجهزة المتوسطة
+   ============================================ */
+
+@media (min-width: 481px) and (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .prices-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .price-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+/* ============================================
+   التنسيق على الأجهزة الكبيرة
+   ============================================ */
+
+@media (min-width: 769px) {
+    .container {
+        max-width: 500px;
+        padding: 0 2rem;
+    }
+
+    .prices-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* ============================================
+   التنسيق للشاشات العريضة جداً
+   ============================================ */
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 550px;
+    }
+
+    .prices-container {
+        gap: 2rem;
+    }
+
+    .contact-grid {
+        gap: 2rem;
+    }
+}
+
+/* ============================================
+   دعم الأوضاع المختلفة
+   ============================================ */
+
+@media (orientation: landscape) and (max-height: 500px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+
+    .main-login h2 {
+        margin-bottom: 1rem;
+    }
+
+    .input-group {
+        margin: 0.5rem 0;
+        padding: 0.6rem 1rem;
+    }
+
+    .submit-btn {
+        margin-top: 0.75rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* ============================================
+   دعم الشاشات الداكنة والفاتحة
+   ============================================ */
+
+@media (prefers-color-scheme: light) {
+    body {
+        --text-color: #1f2937;
+        --bg-color: #f9fafb;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --text-color: #f3f4f6;
+        --bg-color: #0f172a;
+    }
+}
+
+/* ============================================
+   دعم أجهزة اللمس والماوس
+   ============================================ */
+
+@media (hover: hover) {
+    .submit-btn {
+        cursor: pointer;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+    }
+}
+
+@media (hover: none) {
+    .submit-btn {
+        cursor: default;
+    }
+
+    .submit-btn:active {
+        transform: scale(0.98);
+    }
+}
+
+/* ============================================
+   تحسينات الأداء
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   تحسينات الوصول
+   ============================================ */
+
+@media (prefers-contrast: more) {
+    .input-group,
+    .price-item,
+    .contact-item {
+        border: 2px solid currentColor;
+    }
+}
+
+/* ============================================
+   دعم العرض على الطابعات
+   ============================================ */
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .submit-btn,
+    .contact-item {
+        display: none;
+    }
+
+    .glass-card {
+        page-break-inside: avoid;
+    }
+}
